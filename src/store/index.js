@@ -76,7 +76,7 @@ export default createStore({
       }
     },
     async fetchProjects(context) {
-      const res = await axios.get(`${netURL}projects`)
+      const res = await axios.get(`${netURL}projects`);
       const {results, err} = await res.data;
       if(results) {
         context.commit('setProjects', results)
