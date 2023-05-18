@@ -26,7 +26,7 @@ route.get('/resumeEducation', (req, res) => {
 });
 
 route.get('/projects', (req, res) => {
-    user.fetchProjects, (req, res);
+    user.fetchProjects(req, res);
 });
 
 route.get('/testimonials', (req, res) => {
