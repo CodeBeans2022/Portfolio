@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {createStore} from 'vuex'
-const netURL = "https://portfolio-jkij.onrender.com/"
+const netURL = "https://portfolio-ji6n.onrender.com/"
 
 export default createStore({
   state: {
@@ -9,7 +9,7 @@ export default createStore({
     work: null,
     education: null,
     projects: null,
-    testimonials: null,
+    testimonials: null, 
     message: null
   },
   getters: {
@@ -51,6 +51,7 @@ export default createStore({
       const res = await axios.get(`${netURL}about`)
       const {results, err} = await res.data;
       if(results) {
+        console.log(results)
         context.commit('setDetails', results)
       }else {
         context.commit('setMessage', err)

@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="container">
-        <div class="row" v-for="item in this.homePage" :key="item.homeID">
+        <div class="row" v-for="item in this.home" :key="item.homeID">
           <div class="col">
             <img id="homeImg" :src="item.homeImg" alt="">
           </div>
@@ -18,7 +18,7 @@
     
     export default {
       computed: {
-        homePage() {
+        home() {
           return this.$store.state.homePage
         }
       },
@@ -29,16 +29,8 @@
     </script>
     
     <style scoped>
-    #headings {
-      margin-top: 250px;
-    }
-  
       #greeting {
         color: black;
-      }
-  
-      #homeImg {
-        height: 500px;
       }
     </style>
     

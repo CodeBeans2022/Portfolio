@@ -1,12 +1,12 @@
 <template>
     <div>
+      <NavBar/>
       <Home/>
       <About/>
       <Resume/>
       <Projects/>
       <Testimonials/>
       <ContactMe/>
-      <NavBar/>
       <FooterComp/>
     </div>
     </template>
