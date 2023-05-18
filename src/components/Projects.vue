@@ -1,9 +1,7 @@
 <template>
     <div>
         <div class="container">
-            <h1>nskjbckjebdc</h1>
             <div class="row" v-for="item in this.projects" :key="item.projectsID">
-                <p>{{ item }}</p>
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
