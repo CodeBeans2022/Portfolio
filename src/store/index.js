@@ -51,7 +51,7 @@ export default createStore({
       const res = await axios.get(`${netURL}about`)
       const {results, err} = await res.data;
       if(results) {
-        console.log(results)
+        // console.log(results)
         context.commit('setDetails', results)
       }else {
         context.commit('setMessage', err)
@@ -61,7 +61,7 @@ export default createStore({
       const res = await axios.get(`${netURL}resumeWork`)
       const {results, err} = await res.data;
       if(results) {
-        context.commit('setWork', err)
+        context.commit('setWork', results)
       }else {
         context.commit('setMessage', err)
       }
@@ -70,7 +70,7 @@ export default createStore({
       const res = await axios.get(`${netURL}resumeEducation`)
       const {results, err} = await res.data;
       if(results) {
-        context.commit('setEducation', err)
+        context.commit('setEducation', results)
       }else {
         context.commit('setMessage', err)
       }
@@ -79,7 +79,7 @@ export default createStore({
       const res = await axios.get(`${netURL}projects`)
       const {results, err} = await res.data;
       if(results) {
-        context.commit('setProjects', err)
+        context.commit('setProjects', results)
       }else {
         context.commit('setMessage', err)
       }
@@ -88,7 +88,7 @@ export default createStore({
       const res = await axios.get(`${netURL}testimonials`)
       const {results, err} = await res.data;
       if(results) {
-        context.commit('setTestimonials', err)
+        context.commit('setTestimonials', results)
       }else {
         context.commit('setMessage', err)
       }
