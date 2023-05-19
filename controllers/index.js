@@ -30,7 +30,7 @@ route.get('/projects', (req, res) => {
 });
 
 route.get('/testimonials', (req, res) => {
-    user.fectchTestimonials, (req, res);
+    user.fetchTestimonials (req, res);
 });
 
 module.exports = route;
