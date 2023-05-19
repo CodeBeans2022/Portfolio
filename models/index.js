@@ -47,7 +47,7 @@ class User {
         });
     };
 
-    fectchTestimonials(req, res) {
+    fetchTestimonials(req, res) {
         const fectchTestimonialsQuery = `select testimonialID, reviewerImg, fullName, testimonial from testimonialPage;`;
 
         db.query(fectchTestimonialsQuery, (err, data) => {
