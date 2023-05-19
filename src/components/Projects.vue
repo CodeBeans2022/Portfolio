@@ -32,6 +32,13 @@
     </script>
     
     <style scoped>
-
+          .container {
+        min-height: 100vh;
+      }
+    .card{
+        border: 1px solid black;
+        border-radius: 20px;
+        margin: 10px 0;
+    }
     </style>
     
