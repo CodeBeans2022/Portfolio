@@ -25,11 +25,8 @@
                 return this.$store.state.projects
             }
         },
-        async created() {
-            console.log('comp')
-           await this.$store.dispatch('fetchProjects');
-            console.log('comp')
-
+        created() {
+           this.$store.dispatch('fetchProjects');
         }
     }
     </script>
