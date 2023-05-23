@@ -1,6 +1,11 @@
 <template>
-    <div>
+    <div id="contactMe">
         <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="heading m-5">Contact Me</h1>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-6 mx-auto">
                     <form class="form" action="https://formspree.io/f/xrgvdwyr" method="post" target="_blank">
@@ -22,9 +27,19 @@
     </script>
     
     <style scoped>
-          .container {
+          /* .container {
+        
+      } */
+
+      #contactMe {
+        scroll-margin: 15px;
         min-height: 100vh;
       }
+
+      .heading {
+        font-size: 5rem;
+      }
+
         form {
             border: 1px solid black;
             border-radius: 20px;
