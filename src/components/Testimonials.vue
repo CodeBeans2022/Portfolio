@@ -6,15 +6,15 @@
                     <h1 class="heading m-5">Testimonials</h1>
                 </div>
             </div>
-            <div class="row" v-for="item in this.testimonials" :key="item.testimonialID">
+            <div class="row m-4" id="testi" v-for="item in this.testimonials" :key="item.testimonialID">
                 <div class="col">
-                     <div class="card">
-                        <div class="card-body">
-                            <img :src="item.reviewerImg" class="card-img-top" id="reviewerImg" alt="">
-                            <h2 class="card-title">{{ item.fullName }}</h2>
-                            <p>{{ item.testimonial }}</p>                  
-                        </div>
-                     </div>
+                            <img :src="item.reviewerImg" id="reviewerImg" alt="">
+                </div>
+                <div class="col">
+                    <h2>{{ item.fullName }}</h2>
+                </div>
+                <div class="col">
+                    <p>{{ item.testimonial }}</p>                  
                 </div>
             </div>
         </div>
@@ -65,6 +65,15 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
+    }
+
+    #testi {
+        background: rgba(143, 63, 189, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+    padding: 20px;
     }
     </style>
     

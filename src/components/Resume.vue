@@ -1,73 +1,17 @@
 <template>
     <div id="resume">
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <h1 class="heading m-5">Resume</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h1>Work</h1>
-                </div>
-            </div>
-            <div class="row" v-for="item in this.work" :key="item.WorkID">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="card-title">{{ item.company }}</h2>
-                            <h3 class="card-subtitle">{{ item.occupation }}</h3>
-                            <h3 class="card-subtitle">{{ item.duration }}</h3>
-                            <h3 class="card-subtitle">{{ item.location }}</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h1>Education</h1>
-                </div>
-            </div>
-            <div class="row" v-for="item in this.education" :key="item.EducationID">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="card-title">{{ item.institution }}</h2>
-                            <h3 class="card-subtitle">{{ item.course }}</h3>
-                            <h3 class="card-subtitle">{{ item.duration }}</h3>
-                            <h3>{{ item.location }}</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    
-
     <div class="container Work mb-5">
         <div class="tabCon">
-            <button class="tabsWork" @click="openContentWork('EXL')">EXL</button>
-            <button class="tabsWork" @click="openContentWork('Rocomamas')">Rocomamas</button>
-            <button class="tabsWork" @click="openContentWork('Mugg&Bean2')">Mugg&Bean</button>
-            <button class="tabsWork" @click="openContentWork('Espresso')">Shift Espresso Bar</button>
-            <button class="tabsWork" @click="openContentWork('Mugg&Bean1')">Mugg&Bean</button>
+            <button v-for="item in this.work" :key="item.WorkID" class="tabsWork" @click="openContentWork(item.company)">{{item.company}}</button>
         </div>
-
-        <div id="EXL" class="contentWork">
-            <h3>Work</h3>
+        <div v-for="item in this.work" :key="item.WorkID">
+        <div :id="item.company" class="contentWork">
+            <h3>{{item.company}}</h3>
+            <h4>{{ item.occupation }}</h4>
+            <h5>{{ item.duration }}</h5>
+            <h6>{{ item.location }}</h6>
         </div>
-
-        <div id="Rocomamas" class="contentWork">
-            <h3>Education</h3>
-        </div>
-        <div id="Mugg&Bean2" class="contentWork">
-            <h3>Education</h3>
-        </div>
-        <div id="Espresso" class="contentWork">
-            <h3>Education</h3>
-        </div>
-        <div id="Mugg&Bean1" class="contentWork">
-            <h3>Education</h3>
-        </div>
+    </div>
     </div>
 
     <div class="container Education">
@@ -77,6 +21,9 @@
         <div v-for="item in this.education" :key="item.EducationID">
             <div  :id="item.institution" class="contentEducation">
                 <h3>{{item.institution}}</h3>
+                <h4>{{ item.course }}</h4>
+                <h5>{{ item.duration }}</h5>
+                <h6>{{ item.location }}</h6>
             </div>
         </div>
 
@@ -140,6 +87,7 @@ export default {
         }
     }    
 }
+
 </script>
     
 <style scoped>

@@ -12,16 +12,6 @@
                 </div>
                 <div class="col" id="socials">
                     <div class="row">
-                        <div class="col-12">
-                            <a href="https://www.linkedin.com/in/jamie-lee-kinnear-53980a23a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/CodeBeans2022" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
-                        </div>
-                        <div class="col-12">
-                            <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
-                                data-bs-target="#Bio">
-                                Read Bio
-                            </button>
-                        </div>
                         <div class="col-12 mt-5">
                             <h1 id="skills">Skills</h1>
                         </div>
@@ -32,6 +22,16 @@
                             <i class="fa-brands fa-node"></i>
                             <i class="fa-brands fa-vuejs"></i>
                             <i class="bi bi-filetype-sql"></i>
+                        </div>
+                        <div class="col-12">
+                            <a href="https://www.linkedin.com/in/jamie-lee-kinnear-53980a23a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/CodeBeans2022" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
+                                data-bs-target="#Bio">
+                                Read Bio
+                            </button>
                         </div>
                     </div>
                     <div class="modal fade" id="Bio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

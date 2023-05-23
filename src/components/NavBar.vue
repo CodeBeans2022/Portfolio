@@ -21,7 +21,7 @@
     
     <style scoped>
         .navbar {
-            background-color: rgba(222, 169, 220, 0.767);
+            background-color: rgba(175, 75, 172, 0.685);
             height: 70px;
             position: fixed;
             z-index: 1;
@@ -33,7 +33,7 @@
 
         .navbar a {
             text-decoration: none;
-            color: white;
+            color: #2c3e50;
             margin: 10px auto;
             font-size: 1.5rem;
         }

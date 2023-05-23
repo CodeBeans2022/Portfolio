@@ -68,7 +68,7 @@
   .home {
     position: relative;
     background-image: url('https://i.postimg.cc/5NvPPhgY/myimage.png') ;
-    box-shadow: inset 170px 150px 300px #000000, inset -170px -150px 300px #000000;
+    /* box-shadow: inset 170px 150px 300px #000000, inset -170px -150px 300px #000000; */
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -81,16 +81,20 @@
     }
 
     #headings {
-      color: rgb(170, 104, 163);
+      color: rgb(245, 244, 245);
       margin-top: 70px;
     }
 
     #headings h2 {
-      font-size: 8rem;
+      font-size: 6rem;
     }
 
     #headings h3 {
-      font-size: 6rem;
+      font-size: 3rem;
+    }
+
+    #greeting h2:nth-child(11) {
+      color: blueviolet;
     }
 
     .animation {
