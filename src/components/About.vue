@@ -31,6 +31,7 @@
                             <i class="fa-brands fa-bootstrap"></i>
                             <i class="fa-brands fa-node"></i>
                             <i class="fa-brands fa-vuejs"></i>
+                            <i class="bi bi-filetype-sql"></i>
                         </div>
                     </div>
                     <div class="modal fade" id="Bio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

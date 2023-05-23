@@ -72,33 +72,14 @@
 
     <div class="container Education">
         <div class="tabCon">
-            <button class="tabsEducation" @click="openContentEducation('Udemy')">Udemy</button>
-            <button class="tabsEducation" @click="openContentEducation('LifeChoices')">LifeChoices Academy</button>
-            <button class="tabsEducation" @click="openContentEducation('Balco')">Balco College</button>
-            <button class="tabsEducation" @click="openContentEducation('Westridge')">Westridge High School</button>
-            <button class="tabsEducation" @click="openContentEducation('Crawford')">Crawford CoCT</button>
-            <button class="tabsEducation" @click="openContentEducation('Portland')">Portland High School</button>
+            <button v-for="item in this.education" :key="item.EducationID" class="tabsEducation" @click="openContentEducation(item.institution)">{{item.institution}}</button>
+        </div>
+        <div v-for="item in this.education" :key="item.EducationID">
+            <div  :id="item.institution" class="contentEducation">
+                <h3>{{item.institution}}</h3>
+            </div>
         </div>
 
-        <div id="Udemy" class="contentEducation">
-            <h3>Work</h3>
-        </div>
-
-        <div id="LifeChoices" class="contentEducation">
-            <h3>Education</h3>
-        </div>
-        <div id="Balco" class="contentEducation">
-            <h3>Education</h3>
-        </div>
-        <div id="Westridge" class="contentEducation">
-            <h3>Education</h3>
-        </div>
-        <div id="Crawford" class="contentEducation">
-            <h3>Education</h3>
-        </div>
-        <div id="Portland" class="contentEducation">
-            <h3>Education</h3>
-        </div>
     </div>
 </div>
 </template>
@@ -117,6 +98,7 @@ export default {
     created() {
         this.$store.dispatch('fetchWork');
         this.$store.dispatch('fetchEducation');
+        
     },
 
     methods: {
@@ -206,6 +188,8 @@ export default {
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
     border: 1px solid rgba(4, 41, 42, 0.3);
+    display: flex;
+    /* flex-direction: colum; */
 }
 
 .tabCon button {
@@ -229,7 +213,14 @@ export default {
     background-color: #ccc;
 }
 
-.content {
+.contentEducation {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.contentWork{
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;

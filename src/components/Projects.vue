@@ -10,7 +10,7 @@
                 <div class="col">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
                         <div class="carousel-inner">
-                            <div class="carousel-item active" v-for="item in this.projects" :key="item.projectsID">
+                            <div :class="'carousel-item' + item.className" v-for="item in this.projects" :key="item.projectsID">
                                 <div class="card">
                                     <div class="card-body">
                                         <img id="projImg" :src="item.siteImg" class="card-img-top" alt="">
