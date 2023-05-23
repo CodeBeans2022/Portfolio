@@ -39,7 +39,7 @@ class User {
     };
 
     fetchProjects(req, res) {
-        const fetchProjectsQuery = `select projectsID, siteImg, projectName, githubLink, netlifyLink from projects;`;
+        const fetchProjectsQuery = `select projectsID, className, siteImg, projectName, githubLink, netlifyLink from projects;`;
 
         db.query(fetchProjectsQuery, (err, data) => {
             if(err) throw err, console.log(err);
