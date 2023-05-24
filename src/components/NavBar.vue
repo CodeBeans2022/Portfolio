@@ -21,7 +21,7 @@
     
     <style scoped>
         .navbar {
-            background-color: rgba(175, 75, 172, 0.685);
+            background-color: rgb(175, 75, 172);
             height: 70px;
             position: fixed;
             z-index: 1;

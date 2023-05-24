@@ -23,15 +23,12 @@
                             <i class="fa-brands fa-vuejs"></i>
                             <i class="bi bi-filetype-sql"></i>
                         </div>
-                        <div class="col-12">
-                            <a href="https://www.linkedin.com/in/jamie-lee-kinnear-53980a23a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/CodeBeans2022" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
-                        </div>
-                        <div class="col-12">
+                        <div class="col-12 mt-5">
                             <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
                                 data-bs-target="#Bio">
                                 Read Bio
                             </button>
+                            <a class="btn border border-2 border-dark" href="https://drive.google.com/file/d/1H3XhplHOM-SPQuodfPfb0Oquk1eQ-n86/view?usp=share_link" download target="_blank">Download CV</a>
                         </div>
                     </div>
                     <div class="modal fade" id="Bio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -103,7 +100,8 @@ p {
 
 .btn {
     height: 60px;
-    width: 150px;
+    width: 200px;
+    margin: 5px;
     font-size: 1.5rem;
 }
 
@@ -116,16 +114,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-a i {
-    font-size: 5rem;
-    margin: 15px;
-    color: rgb(144, 80, 146);
-}
-
-a i:hover {
-    color: whitesmoke;
 }
 
 #icons {

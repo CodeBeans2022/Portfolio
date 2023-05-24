@@ -60,7 +60,7 @@ export default {
             }
 
             tabs = document.getElementsByClassName("tabsWork");
-            for (i = 0; i < tabs.length; i++) {
+            for (i = 0; i < 1; i++) {
                 tabs[i].className = tabs[i].className.replace(" active", "");
             }
             document.getElementById(contentName).style.display = "block";

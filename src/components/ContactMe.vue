@@ -9,9 +9,9 @@
             <div class="row">
                 <div class="col-6 mx-auto">
                     <form class="form" action="https://formspree.io/f/xrgvdwyr" method="post" target="_blank">
-                        <input class="m-2 rounded" type="text" placeholder="Please Enter Your Name">
-                        <input class="m-2 rounded" type="email" placeholder="Please Enter Your Email">
-                        <textarea class="m-2 rounded" name="message" id="message" rows="5" placeholder="Enter Your Message Here"></textarea>
+                        <input class="m-2 rounded text-center" type="text" placeholder="Please Enter Your Name">
+                        <input class="m-2 rounded text-center" type="email" placeholder="Please Enter Your Email">
+                        <textarea class="m-2 rounded text-center" name="message" id="message" rows="5" placeholder="Enter Your Message Here"></textarea>
                         <button class="btn border border-2 border-dark" type="submit">Submit Message</button>
                     </form>
                 </div>
