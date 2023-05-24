@@ -21,7 +21,7 @@ class User {
     };
 
     fetchWork(req, res) {
-        const fetchWorkQuery = `select WorkID, company, occupation, duration, location from workExperience;`;
+        const fetchWorkQuery = `select WorkID, className, company, occupation, duration, location from workExperience;`;
 
         db.query(fetchWorkQuery, (err, data) => {
             if(err) throw err, console.log(err);
@@ -30,7 +30,7 @@ class User {
     };
 
     fetchEducation(req, res) {
-        const fetchEducationQuery = `select EducationID, institution, course, duration, location from educationExperience;`;
+        const fetchEducationQuery = `select EducationID, className, institution, course, duration, location from educationExperience;`;
 
         db.query(fetchEducationQuery, (err, data) => {
             if(err) throw err, console.log(err);
