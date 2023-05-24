@@ -48,7 +48,7 @@ class User {
     };
 
     fetchTestimonials(req, res) {
-        const fectchTestimonialsQuery = `select testimonialID, reviewerImg, fullName, testimonial from testimonialPage;`;
+        const fectchTestimonialsQuery = `select testimonialID, reviewerImg, fullName, linkedinLink, githubLink, testimonial from testimonialPage;`;
 
         db.query(fectchTestimonialsQuery, (err, data) => {
             if(err) throw err, console.log(err);
