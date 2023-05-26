@@ -23,7 +23,7 @@
                             <i class="fa-brands fa-vuejs"></i>
                             <i class="bi bi-filetype-sql"></i>
                         </div>
-                        <div class="col-12 mt-5">
+                        <div class="col-12 btnCon">
                             <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
                                 data-bs-target="#Bio">
                                 Read Bio
@@ -74,6 +74,7 @@ export default {
 #about {
     scroll-margin: 65px;
     min-height: 100vh;
+    margin-bottom: 10%;
 }
 
 .heading {
@@ -110,6 +111,10 @@ p {
     color: white;
 }
 
+.btnCon{
+    margin-top: 30px;
+}
+
 #socials {
     display: flex;
     align-items: center;
@@ -122,6 +127,39 @@ p {
     grid-template-rows: 1fr 1fr;
     font-size: 4rem;
     grid-gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .heading {
+    font-size: 4rem;
+}
+
+#devImg {
+    height: 300px;
+}
+
+#skills {
+    font-size: 2rem;
+}
+
+#icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 2rem;
+    grid-gap: 5px;
+}
+
+.btnCon {
+    display: flex;
+}
+
+.btn {
+    height: 60px;
+    width: 110px;
+    margin: 5px;
+    font-size: 1rem;
+}
 }
 </style>
     

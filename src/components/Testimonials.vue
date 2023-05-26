@@ -136,5 +136,18 @@ a i:hover {
     justify-content: center;
     align-items: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .heading {
+    font-size: 2rem;
+}
+
+#reviewerImg {
+    height: 400px;
+    width: 100%;
+    object-fit: contain;
+    grid-column: span 2;
+}
+}
 </style>
     

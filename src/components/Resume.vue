@@ -4,8 +4,8 @@
         <div class="tabCon">
             <button v-for="item in this.work" :key="item.WorkID" class="tabsWork" @click="openContentWork(item.company)">{{item.company}}</button>
         </div>
-        <div v-for="item in this.work" :key="item.WorkID">
-        <div :id="item.company" class="contentWork">
+        <div>
+        <div v-for="item in this.work" :key="item.WorkID" :id="item.company" class="contentWork">
             <h3>{{item.company}}</h3>
             <h4>{{ item.occupation }}</h4>
             <h5>{{ item.duration }}</h5>
@@ -18,8 +18,8 @@
         <div class="tabCon">
             <button v-for="item in this.education" :key="item.EducationID" class="tabsEducation" @click="openContentEducation(item.institution)">{{item.institution}}</button>
         </div>
-        <div v-for="item in this.education" :key="item.EducationID">
-            <div  :id="item.institution" class="contentEducation">
+        <div>
+            <div v-for="item in this.education" :key="item.EducationID" :id="item.institution" class="contentEducation">
                 <h3>{{item.institution}}</h3>
                 <h4>{{ item.course }}</h4>
                 <h5>{{ item.duration }}</h5>
@@ -34,6 +34,7 @@
 <script>
 
 export default {
+
     computed: {
         work() {
             return this.$store.state.work
@@ -42,50 +43,50 @@ export default {
             return this.$store.state.education
         }
     },
-    created() {
-        this.$store.dispatch('fetchWork');
-        this.$store.dispatch('fetchEducation');
-        
-    },
-
+    async created() {
+        await this.$store.dispatch('fetchWork');
+        await this.$store.dispatch('fetchEducation');
+        [...document.querySelectorAll('.tabsWork')][0].classList.add('active');
+        [...document.querySelectorAll('.tabsEducation')][0].classList.add('active')
+    },    
     methods: {
         openContentWork(contentName) {
-            let i,
                 content,
                 tabs;
 
             content = document.getElementsByClassName("contentWork");
-            for (i = 0; i < content.length; i++) {
+            for (let i = 0; i < content.length; i++) {
                 content[i].style.display = "none";
-            }
+            } 
 
             tabs = document.getElementsByClassName("tabsWork");
-            for (i = 0; i < 1; i++) {
+            for (i = 0; i < tabs.length; i++) {
                 tabs[i].className = tabs[i].className.replace(" active", "");
+            } 
+            if (i = 0) {
+                console.log(i);
+                tabs[i].className = tabs[i].className.replace("", " active")
             }
             document.getElementById(contentName).style.display = "block";
-            console.log(event.target);
             event.target.classList.add('active');
         },
         openContentEducation(contentName) {
-            let i,
                 content,
                 tabs;
 
             content = document.getElementsByClassName("contentEducation");
-            for (i = 0; i < content.length; i++) {
+            for (let i = 0; i < content.length; i++) {
                 content[i].style.display = "none";
             }
 
             tabs = document.getElementsByClassName("tabsEducation");
-            for (i = 0; i < tabs.length; i++) {
+            for (let i = 0; i < tabs.length; i++) {
                 tabs[i].className = tabs[i].className.replace(" active", "");
             }
             document.getElementById(contentName).style.display = "block";
-            console.log(event.target);
             event.target.classList.add('active');
         }
-    }    
+    },
 }
 
 </script>
@@ -94,14 +95,15 @@ export default {
 /* .container {
     
 } */
-
+.show{
+    display: block;
+}
 .Work {
     background: rgba(143, 63, 189, 0.32);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.1px);
     -webkit-backdrop-filter: blur(4.1px);
-    border: 1px solid rgba(63, 175, 189, 0.3);
 }
 
 .Education {
@@ -110,7 +112,6 @@ export default {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.1px);
     -webkit-backdrop-filter: blur(4.1px);
-    border: 1px solid rgba(63, 175, 189, 0.3);
 }
 
 #resume {
@@ -123,7 +124,6 @@ export default {
 }
 
 .card {
-    border: 1px solid black;
     border-radius: 20px;
     margin: 10px 0;
 }
@@ -135,7 +135,6 @@ export default {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
-    border: 1px solid rgba(4, 41, 42, 0.3);
     display: flex;
     /* flex-direction: colum; */
 }
@@ -161,18 +160,42 @@ export default {
     background-color: #ccc;
 }
 
+/* .tabsWork:nth-child(1){
+    background-color: #ccc;
+} */
+
 .contentEducation {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
     border-top: none;
 }
 
 .contentWork{
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
     border-top: none;
+}
+.contentWork:nth-child(1), .contentEducation:nth-child(1){
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .tabCon button {
+    background-color: inherit;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    margin: 5px;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.tabCon {
+    overflow-y: scroll;
+}
 }
 </style>
     

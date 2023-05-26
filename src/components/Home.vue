@@ -69,5 +69,20 @@
     #headings h3 {
       font-size: 3rem;
     }
+
+    @media only screen  and (max-width: 600px) {
+      #headings {
+      color: rgb(109, 75, 109);
+      margin-top: 90px;
+    }
+
+    #headings h2 {
+      font-size: 2rem;
+    }
+
+    #headings h3 {
+      font-size: 2rem;
+    }
+    }
   </style>
   
