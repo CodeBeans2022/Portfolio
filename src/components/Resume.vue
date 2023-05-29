@@ -1,32 +1,40 @@
 <template>
     <div id="resume">
+        <div class="row">
+            <div class="col">
+                <h1 class="heading mb-5">Resume</h1>
+            </div>
+        </div>
     <div class="container Work mb-5">
-        <div class="tabCon">
-            <button v-for="item in this.work" :key="item.WorkID" class="tabsWork" @click="openContentWork(item.company)">{{item.company}}</button>
-        </div>
-        <div>
-        <div v-for="item in this.work" :key="item.WorkID" :id="item.company" class="contentWork">
-            <h3>{{item.company}}</h3>
-            <h4>{{ item.occupation }}</h4>
-            <h5>{{ item.duration }}</h5>
-            <h6>{{ item.location }}</h6>
-        </div>
-    </div>
+            <div class="row">
+                <div class="tabCon">
+                    <button v-for="item in this.work" :key="item.WorkID" class="tabsWork" @click="openContentWork(item.company)">{{item.company}}</button>
+                </div>
+                <div>
+                <div v-for="item in this.work" :key="item.WorkID" :id="item.company" class="contentWork">
+                    <h3>{{item.company}}</h3>
+                    <h4>{{ item.occupation }}</h4>
+                    <h5>{{ item.duration }}</h5>
+                    <h6>{{ item.location }}</h6>
+                </div>
+            </div>
+            </div>
     </div>
 
     <div class="container Education">
-        <div class="tabCon">
-            <button v-for="item in this.education" :key="item.EducationID" class="tabsEducation" @click="openContentEducation(item.institution)">{{item.institution}}</button>
-        </div>
-        <div>
-            <div v-for="item in this.education" :key="item.EducationID" :id="item.institution" class="contentEducation">
-                <h3>{{item.institution}}</h3>
-                <h4>{{ item.course }}</h4>
-                <h5>{{ item.duration }}</h5>
-                <h6>{{ item.location }}</h6>
+        <div class="row">
+            <div class="tabCon">
+                <button v-for="item in this.education" :key="item.EducationID" class="tabsEducation" @click="openContentEducation(item.institution)">{{item.institution}}</button>
+            </div>
+            <div>
+                <div v-for="item in this.education" :key="item.EducationID" :id="item.institution" class="contentEducation">
+                    <h3>{{item.institution}}</h3>
+                    <h4>{{ item.course }}</h4>
+                    <h5>{{ item.duration }}</h5>
+                    <h6>{{ item.location }}</h6>
+                </div>
             </div>
         </div>
-
     </div>
 </div>
 </template>
@@ -115,8 +123,9 @@ export default {
 }
 
 #resume {
-    scroll-margin: 15px;
+    scroll-margin: 60px;
     min-height: 100vh;
+    margin: 10px;
 }
 
 .heading {
@@ -129,7 +138,6 @@ export default {
 }
 
 .tabCon {
-    overflow: hidden;
     background: rgba(140, 70, 147, 0.199);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -181,20 +189,20 @@ export default {
 
 @media only screen and (max-width: 600px) {
     .tabCon button {
-    background-color: inherit;
-    justify-content: center;
-    border: none;
     border-radius: 5px;
-    outline: none;
-    cursor: pointer;
     padding: 5px 5px;
     margin: 5px;
-    transition: 0.3s;
     font-size: 1rem;
+    height: 50px;
+    width: 90px;
 }
 
 .tabCon {
-    overflow-y: scroll;
+    overflow: scroll;
+}
+
+.heading {
+    font-size: 4rem;
 }
 }
 </style>

@@ -73,7 +73,7 @@
     @media only screen  and (max-width: 600px) {
       #headings {
       color: rgb(109, 75, 109);
-      margin-top: 90px;
+      margin-top: 120px;
     }
 
     #headings h2 {

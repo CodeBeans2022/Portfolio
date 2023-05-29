@@ -19,6 +19,7 @@
                             <i class="fa-solid fa-code"></i>
                             <i class="fa-brands fa-css3"></i>
                             <i class="fa-brands fa-bootstrap"></i>
+                            <i class="bi bi-filetype-js"></i>
                             <i class="fa-brands fa-node"></i>
                             <i class="fa-brands fa-vuejs"></i>
                             <i class="bi bi-filetype-sql"></i>
@@ -139,7 +140,7 @@ p {
 }
 
 #skills {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 #icons {
@@ -159,6 +160,14 @@ p {
     width: 110px;
     margin: 5px;
     font-size: 1rem;
+}
+
+#about {
+    scroll-margin: 5px;
+}
+
+.modal-content {
+    width: 100%;
 }
 }
 </style>

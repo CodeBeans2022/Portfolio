@@ -132,5 +132,18 @@ export default {
         transform: rotateY(360deg);
     }
 }
+
+@media only screen and (max-width: 600px) {
+    #projImg {
+    height: 200px;
+    width: 300px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.heading {
+    font-size: 4rem;
+}
+}
 </style>
     

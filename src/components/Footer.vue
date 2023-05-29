@@ -10,8 +10,6 @@
     <div class="card card-body" style="width: 100%;">
       <h1 class="copy">&copy;</h1> 
       <h5 class="name">Jamie-Lee Kinnear</h5>
-      <a href="https://www.linkedin.com/in/jamie-lee-kinnear-53980a23a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/CodeBeans2022" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
     </div>
   </div>
 </div>
@@ -30,7 +28,7 @@
         position: fixed;
         bottom: 0;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         width: 100%;
     }
 
@@ -66,15 +64,5 @@
         margin: 5px;
         background-color: rgba(175, 75, 172, 0.685);
     }
-
-    .card-body a i {
-    font-size: 3rem;
-    margin: 5px;
-    color: rgb(0, 0, 0);
-}
-
-.card-body a i:hover {
-    color: whitesmoke;
-}
-    </style>
+</style>
     

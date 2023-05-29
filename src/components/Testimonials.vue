@@ -1,8 +1,10 @@
 <template>
     <div id="testimonials">
-        <div class="row">
-            <div class="col text-center">
-                <h1 class="heading m-5">Testimonials</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="heading mt-5 mb-5">Testimonials</h1>
+                </div>
             </div>
         </div>
         <div class="container" v-for="item in this.testimonials" :key="item.testimonialID">
@@ -80,7 +82,9 @@ export default {
 
 .heading {
     font-size: 5rem;
+    width: 100%;
 }
+
 
 .card {
     border: 1px solid black;
@@ -104,9 +108,10 @@ export default {
 }
 
 .modal-content {
-    width: 700px;
+    width: 100%;
     background-color: rgba(222, 169, 220, 0.767);
     color: white;
+    font-size: 2rem;
 }
 
 .btn {
@@ -139,14 +144,24 @@ a i:hover {
 
 @media only screen and (max-width: 600px) {
     .heading {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 #reviewerImg {
-    height: 400px;
+    height: 300px;
     width: 100%;
+    min-width: 200px;
     object-fit: contain;
-    grid-column: span 2;
+    /* grid-column: span 2; */
+}
+
+#testi {
+    padding: 0;
+}
+
+.modal-content {
+    width: 100%;
+    font-size: 1.5rem;
 }
 }
 </style>
