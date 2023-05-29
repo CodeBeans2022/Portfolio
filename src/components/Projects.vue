@@ -43,6 +43,7 @@ export default {
             return this.$store.state.projects
         }
     },
+    
     methods: {
         activeClass() {
             console.log('beans');

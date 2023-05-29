@@ -7,5 +7,4 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 // import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap'
 
-
 createApp(App).use(store).use(router).mount('#app')

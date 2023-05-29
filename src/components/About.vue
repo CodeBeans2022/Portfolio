@@ -16,20 +16,26 @@
                             <h1 id="skills">Skills</h1>
                         </div>
                         <div class="col" id="icons">
-                            <i class="fa-solid fa-code"></i>
-                            <i class="fa-brands fa-css3"></i>
-                            <i class="fa-brands fa-bootstrap"></i>
-                            <i class="bi bi-filetype-js"></i>
-                            <i class="fa-brands fa-node"></i>
-                            <i class="fa-brands fa-vuejs"></i>
-                            <i class="bi bi-filetype-sql"></i>
+                            <Popper content="HTML"><i class="fa-solid fa-code"></i></Popper>
+                            <Popper content="CSS"><i class="fa-brands fa-css3"></i></Popper>
+                            <Popper content="Boostrap"><i class="fa-brands fa-bootstrap"></i></Popper>
+                            <Popper content="Javascript"><i class="bi bi-filetype-js"></i></Popper>
+                            <Popper content="Node.js"><i class="fa-brands fa-node"></i></Popper>
+                            <Popper content="Vue.js"><i class="fa-brands fa-vuejs"></i></Popper>
+                            <Popper content="MySQL"><i class="bi bi-filetype-sql"></i></Popper>
                         </div>
                         <div class="col-12 btnCon">
                             <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
                                 data-bs-target="#Bio">
                                 Read Bio
                             </button>
-                            <a class="btn border border-2 border-dark" href="https://drive.google.com/file/d/1H3XhplHOM-SPQuodfPfb0Oquk1eQ-n86/view?usp=share_link" download target="_blank">Download CV</a>
+                            <a class="btn border border-2 border-dark"
+                                href="https://drive.google.com/file/d/1H3XhplHOM-SPQuodfPfb0Oquk1eQ-n86/view?usp=share_link"
+                                download target="_blank">Download CV</a>
+
+                            <div>
+                                <a class="" id="testTool">The Drop</a>
+                            </div>
                         </div>
                     </div>
                     <div class="modal fade" id="Bio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -54,17 +60,23 @@
 </template>
     
 <script>
-
-export default {
-    computed: {
-        about() {
-            return this.$store.state.details
+import {defineComponent} from "vue"
+import Popper from "vue3-popper"
+export default defineComponent(
+    {
+        components: {
+            Popper
+        },
+        computed: {
+            about() {
+                return this.$store.state.details
+            }
+        },
+        created() {
+            this.$store.dispatch('fetchDetails');
         }
-    },
-    created() {
-        this.$store.dispatch('fetchDetails');
     }
-}
+)
 </script>
     
 <style scoped>
@@ -73,9 +85,8 @@ export default {
 } */
 
 #about {
-    scroll-margin: 65px;
+    scroll-margin: 60px;
     min-height: 100vh;
-    margin-bottom: 10%;
 }
 
 .heading {
@@ -112,7 +123,7 @@ p {
     color: white;
 }
 
-.btnCon{
+.btnCon {
     margin-top: 30px;
 }
 
@@ -132,43 +143,43 @@ p {
 
 @media only screen and (max-width: 600px) {
     .heading {
-    font-size: 4rem;
-}
+        font-size: 4rem;
+    }
 
-#devImg {
-    height: 300px;
-}
+    #devImg {
+        height: 300px;
+    }
 
-#skills {
-    font-size: 3rem;
-}
+    #skills {
+        font-size: 3rem;
+    }
 
-#icons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    font-size: 2rem;
-    grid-gap: 5px;
-}
+    #icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        font-size: 2rem;
+        grid-gap: 5px;
+    }
 
-.btnCon {
-    display: flex;
-}
+    .btnCon {
+        display: flex;
+    }
 
-.btn {
-    height: 60px;
-    width: 110px;
-    margin: 5px;
-    font-size: 1rem;
-}
+    .btn {
+        height: 60px;
+        width: 110px;
+        margin: 5px;
+        font-size: 1rem;
+    }
 
-#about {
-    scroll-margin: 5px;
-}
+    #about {
+        scroll-margin: 5px;
+    }
 
-.modal-content {
-    width: 100%;
-}
+    .modal-content {
+        width: 100%;
+    }
 }
 </style>
     
