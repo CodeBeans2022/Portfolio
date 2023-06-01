@@ -15,6 +15,9 @@
                         <div class="col-12 mt-5">
                             <h1 id="skills">Skills</h1>
                         </div>
+                        <div class="col-12">
+                            <h6 class="message">click icons</h6>
+                        </div>
                         <div class="col" id="icons">
                             <Popper content="HTML"><i class="fa-solid fa-code"></i></Popper>
                             <Popper content="CSS"><i class="fa-brands fa-css3"></i></Popper>
@@ -32,10 +35,6 @@
                             <a class="btn border border-2 border-dark"
                                 href="https://drive.google.com/file/d/1H3XhplHOM-SPQuodfPfb0Oquk1eQ-n86/view?usp=share_link"
                                 download target="_blank">Download CV</a>
-
-                            <div>
-                                <a class="" id="testTool">The Drop</a>
-                            </div>
                         </div>
                     </div>
                     <div class="modal fade" id="Bio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -91,6 +90,10 @@ export default defineComponent(
 
 .heading {
     font-size: 5rem;
+}
+
+.message {
+    text-decoration: underline;
 }
 
 #skills {
