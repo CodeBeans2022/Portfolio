@@ -1,5 +1,6 @@
 <template>
     <div>
+      <!-- <Spinner/> -->
       <NavBar/>
       <Home/>
       <About/>
@@ -20,6 +21,7 @@
     import Testimonials from '@/components/Testimonials.vue'
     import ContactMe from '@/components/ContactMe.vue'
     import FooterComp from '@/components/Footer.vue'
+    // import Spinner from '@/components/Spinner.vue'
     export default {
       components: {
         Home, 
@@ -29,7 +31,8 @@
         Testimonials,
         ContactMe,
         NavBar,
-        FooterComp
+        FooterComp,
+        // Spinner
       }
     }
     </script>

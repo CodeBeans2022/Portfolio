@@ -1,5 +1,8 @@
 <template>
-    <div id="resume">
+    <div class="spinner" v-if="!spinner">
+        <Spinner/>
+    </div>
+    <div id="resume" v-else>
         <div class="row">
             <div class="col">
                 <h1 class="heading mb-5">Resume</h1>
@@ -40,15 +43,20 @@
 </template>
     
 <script>
-
+import Spinner from '@/components/Spinner.vue'
 export default {
-
+    components: {
+        Spinner
+    },
     computed: {
         work() {
             return this.$store.state.work
         },
         education() {
             return this.$store.state.education
+        },
+        spinner() {
+            return this.$store.state.spinner
         }
     },
     async created() {
@@ -103,6 +111,15 @@ export default {
 /* .container {
     
 } */
+
+.spinner{
+    font-size: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    /* transform: translateY(-50%) translateX(-50%); */
+}
 .show{
     display: block;
 }

@@ -1,6 +1,9 @@
 <template>
-  <div class="home" id="home">
-    <div class="container">
+  <div class="spinner" v-if="!spinner">
+    <Spinner/>
+  </div>
+  <div class="home" id="home" v-else>
+    <div class="container" >
       <div class="row" v-for="item in this.home" :key="item.homeID">
         <!-- <div class="col">
           <img id="homeImg" :src="item.homeImg" alt="">
@@ -15,11 +18,17 @@
   </template>
   
   <script>
-  
+  import Spinner from '@/components/Spinner.vue'
   export default {
+    components: {
+      Spinner
+    },
     computed: {
       home() {
         return this.$store.state.homePage
+      },
+      spinner() {
+        return this.$store.state.spinner
       }
     },
     created() {
@@ -29,6 +38,15 @@
   </script>
   
   <style scoped>
+
+.spinner{
+    font-size: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    /* transform: translateY(-50%) translateX(-50%); */
+}
 
 .textGlow {
   text-align: center;

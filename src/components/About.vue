@@ -1,5 +1,8 @@
 <template>
-    <div id="about">
+    <div class="spinner" v-if="!spinner">
+        <Spinner/>
+    </div>
+    <div id="about" v-else>
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -59,16 +62,21 @@
 </template>
     
 <script>
+import Spinner from '@/components/Spinner.vue'
 import {defineComponent} from "vue"
 import Popper from "vue3-popper"
 export default defineComponent(
     {
         components: {
-            Popper
+            Popper,
+            Spinner
         },
         computed: {
             about() {
                 return this.$store.state.details
+            },
+            spinner() {
+                return this.$store.state.spinner
             }
         },
         created() {
@@ -82,6 +90,14 @@ export default defineComponent(
 /* .container {
     
 } */
+.spinner{
+    font-size: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    /* transform: translateY(-50%) translateX(-50%); */
+}
 
 #about {
     scroll-margin: 60px;

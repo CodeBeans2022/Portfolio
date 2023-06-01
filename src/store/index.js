@@ -10,7 +10,8 @@ export default createStore({
     education: null,
     projects: null,
     testimonials: null, 
-    message: null
+    message: null,
+    spinner: false
   },
   getters: {
   },
@@ -35,6 +36,9 @@ export default createStore({
     },
     setMessage(state, value) {
       state.message = value
+    },
+    setSpinner(state, value) {
+      state.spinner = value
     }
   },
   actions: {
@@ -43,6 +47,7 @@ export default createStore({
       const {results, err} = await res.data;
       if(results) {
         context.commit('setHomePage', results)
+        setTimeout(context.commit('setSpinner', true), 1000)
       }else {
         context.commit('setMessage', err)
       }
@@ -53,6 +58,7 @@ export default createStore({
       if(results) {
         // console.log(results)
         context.commit('setDetails', results)
+        setTimeout(context.commit('setSpinner', true), 1000)
       }else {
         context.commit('setMessage', err)
       }
@@ -62,6 +68,7 @@ export default createStore({
       const {results, err} = await res.data;
       if(results) {
         context.commit('setWork', results)
+        setTimeout(context.commit('setSpinner', true), 1000)
       }else {
         context.commit('setMessage', err)
       }
@@ -71,6 +78,7 @@ export default createStore({
       const {results, err} = await res.data;
       if(results) {
         context.commit('setEducation', results)
+        setTimeout(context.commit('setSpinner', true), 1000)
       }else {
         context.commit('setMessage', err)
       }
@@ -80,6 +88,7 @@ export default createStore({
       const {results, err} = await res.data;
       if(results) {
         context.commit('setProjects', results)
+        setTimeout(context.commit('setSpinner', true), 1000)
       }else {
         context.commit('setMessage', err)
       }
@@ -89,6 +98,7 @@ export default createStore({
       const {results, err} = await res.data;
       if(results) {
         context.commit('setTestimonials', results)
+        setTimeout(context.commit('setSpinner', true), 1000)
       }else {
         context.commit('setMessage', err)
       }
