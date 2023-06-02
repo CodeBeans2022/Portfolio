@@ -6,12 +6,12 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h1 class="heading mt-5 mb-5">Testimonials</h1>
+                    <h1 class="heading">Testimonials</h1>
                 </div>
             </div>
         </div>
         <div class="container" v-for="item in this.testimonials" :key="item.testimonialID">
-            <div class="row m-4" id="testi">
+            <div class=" mb-4" id="testi">
                 <div class="col">
                     <img :src="item.reviewerImg" id="reviewerImg" alt="">
                 </div>
@@ -33,6 +33,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Modal -->
             <div class="modal fade" :id="item.testimonialID" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -100,29 +101,17 @@ export default {
 
 .heading {
     font-size: 5rem;
-    width: 100%;
+    /* width: 100%; */
 }
 
-
-.card {
-    border: 1px solid black;
-    border-radius: 20px;
-    margin: 10px 0;
-}
-
-.card-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-#testi {
+#testi{
     background: rgba(143, 63, 189, 0.32);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.1px);
     -webkit-backdrop-filter: blur(4.1px);
-    padding: 20px;
+    width: 100%;
+    padding: 10px;
 }
 
 .modal-content {
@@ -162,22 +151,28 @@ a i:hover {
 
 @media only screen and (max-width: 600px) {
     .heading {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 #reviewerImg {
     height: 300px;
     width: 100%;
-    min-width: 200px;
+    /* min-width: 200px; */
     object-fit: contain;
     /* grid-column: span 2; */
 }
 
-#testi {
+/* #testi {
     padding: 0;
-}
+} */
 
 .modal-content {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.btn {
+    height: 100%;
     width: 100%;
     font-size: 1.5rem;
 }

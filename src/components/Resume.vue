@@ -1,6 +1,6 @@
 <template>
     <div class="spinner" v-if="!spinner">
-        <Spinner/>
+        <Spinner />
     </div>
     <div id="resume" v-else>
         <div class="row">
@@ -8,87 +8,88 @@
                 <h1 class="heading mb-5">Resume</h1>
             </div>
         </div>
-    <div class="container Work mb-5">
+        <div class="container Work mb-5">
             <div class="row">
                 <div class="tabCon">
-                    <button v-for="item in this.work" :key="item.WorkID" class="tabsWork" @click="openContentWork(item.company)">{{item.company}}</button>
+                    <button v-for="item in this.work" :key="item.WorkID" class="tabsWork"
+                        @click="openContentWork(item.company)">
+                        {{ item.company }}
+                    </button>
                 </div>
                 <div>
-                <div v-for="item in this.work" :key="item.WorkID" :id="item.company" class="contentWork">
-                    <h3>{{item.company}}</h3>
-                    <h4>{{ item.occupation }}</h4>
-                    <h5>{{ item.duration }}</h5>
-                    <h6>{{ item.location }}</h6>
+                    <div v-for="item in this.work" :key="item.WorkID" :id="item.company" class="contentWork">
+                        <h3>{{ item.company }}</h3>
+                        <h4>{{ item.occupation }}</h4>
+                        <h5>{{ item.duration }}</h5>
+                        <h6>{{ item.location }}</h6>
+                    </div>
                 </div>
             </div>
-            </div>
-    </div>
+        </div>
 
-    <div class="container Education">
-        <div class="row">
-            <div class="tabCon">
-                <button v-for="item in this.education" :key="item.EducationID" class="tabsEducation" @click="openContentEducation(item.institution)">{{item.institution}}</button>
-            </div>
-            <div>
-                <div v-for="item in this.education" :key="item.EducationID" :id="item.institution" class="contentEducation">
-                    <h3>{{item.institution}}</h3>
-                    <h4>{{ item.course }}</h4>
-                    <h5>{{ item.duration }}</h5>
-                    <h6>{{ item.location }}</h6>
+        <div class="container Education">
+            <div class="row">
+                <div class="tabCon">
+                    <button v-for="item in this.education" :key="item.EducationID" class="tabsEducation"
+                        @click="openContentEducation(item.institution)">
+                        {{ item.institution }}
+                    </button>
+                </div>
+                <div>
+                    <div v-for="item in this.education" :key="item.EducationID" :id="item.institution"
+                        class="contentEducation">
+                        <h3>{{ item.institution }}</h3>
+                        <h4>{{ item.course }}</h4>
+                        <h5>{{ item.duration }}</h5>
+                        <h6>{{ item.location }}</h6>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </template>
-    
+
 <script>
-import Spinner from '@/components/Spinner.vue'
+import Spinner from "@/components/Spinner.vue";
 export default {
     components: {
-        Spinner
+        Spinner,
     },
     computed: {
         work() {
-            return this.$store.state.work
+            return this.$store.state.work;
         },
         education() {
-            return this.$store.state.education
+            return this.$store.state.education;
         },
         spinner() {
-            return this.$store.state.spinner
-        }
+            return this.$store.state.spinner;
+        },
     },
     async created() {
-        await this.$store.dispatch('fetchWork');
-        await this.$store.dispatch('fetchEducation');
-        [...document.querySelectorAll('.tabsWork')][0].classList.add('active');
-        [...document.querySelectorAll('.tabsEducation')][0].classList.add('active')
-    },    
+        await this.$store.dispatch("fetchWork");
+        await this.$store.dispatch("fetchEducation");
+        [...document.querySelectorAll(".tabsWork")][0].classList.add("active");
+        [...document.querySelectorAll(".tabsEducation")][0].classList.add("active");
+    },
     methods: {
         openContentWork(contentName) {
-                content,
-                tabs;
+            let content, tabs;
 
             content = document.getElementsByClassName("contentWork");
             for (let i = 0; i < content.length; i++) {
                 content[i].style.display = "none";
-            } 
+            }
 
             tabs = document.getElementsByClassName("tabsWork");
-            for (i = 0; i < tabs.length; i++) {
+            for (let i = 0; i < tabs.length; i++) {
                 tabs[i].className = tabs[i].className.replace(" active", "");
-            } 
-            if (i = 0) {
-                console.log(i);
-                tabs[i].className = tabs[i].className.replace("", " active")
             }
             document.getElementById(contentName).style.display = "block";
-            event.target.classList.add('active');
+            event.target.classList.add("active");
         },
         openContentEducation(contentName) {
-                content,
-                tabs;
+            let content, tabs;
 
             content = document.getElementsByClassName("contentEducation");
             for (let i = 0; i < content.length; i++) {
@@ -100,19 +101,18 @@ export default {
                 tabs[i].className = tabs[i].className.replace(" active", "");
             }
             document.getElementById(contentName).style.display = "block";
-            event.target.classList.add('active');
-        }
+            event.target.classList.add("active");
+        },
     },
-}
-
+};
 </script>
-    
+
 <style scoped>
 /* .container {
     
 } */
 
-.spinner{
+.spinner {
     font-size: 40px;
     position: fixed;
     top: 50%;
@@ -120,9 +120,11 @@ export default {
     z-index: 1;
     /* transform: translateY(-50%) translateX(-50%); */
 }
-.show{
+
+.show {
     display: block;
 }
+
 .Work {
     background: rgba(143, 63, 189, 0.32);
     border-radius: 16px;
@@ -195,32 +197,33 @@ export default {
     border-top: none;
 }
 
-.contentWork{
+.contentWork {
     display: none;
     padding: 6px 12px;
     border-top: none;
 }
-.contentWork:nth-child(1), .contentEducation:nth-child(1){
+
+.contentWork:nth-child(1),
+.contentEducation:nth-child(1) {
     display: block;
 }
 
 @media only screen and (max-width: 600px) {
     .tabCon button {
-    border-radius: 5px;
-    padding: 5px 5px;
-    margin: 5px;
-    font-size: 1rem;
-    height: 50px;
-    width: 90px;
-}
+        border-radius: 5px;
+        padding: 5px 5px;
+        margin: 5px;
+        font-size: 1rem;
+        height: 50px;
+        width: 90px;
+    }
 
-.tabCon {
-    overflow: scroll;
-}
+    .tabCon {
+        overflow: scroll;
+    }
 
-.heading {
-    font-size: 4rem;
-}
+    .heading {
+        font-size: 4rem;
+    }
 }
 </style>
-    
