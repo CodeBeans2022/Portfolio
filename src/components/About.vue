@@ -22,13 +22,13 @@
                             <h6 class="message">click icons</h6>
                         </div>
                         <div class="col" id="icons">
-                            <Popper content="HTML"><i class="fa-solid fa-code"></i></Popper>
-                            <Popper content="CSS"><i class="fa-brands fa-css3"></i></Popper>
-                            <Popper content="Boostrap"><i class="fa-brands fa-bootstrap"></i></Popper>
-                            <Popper content="Javascript"><i class="bi bi-filetype-js"></i></Popper>
-                            <Popper content="Node.js"><i class="fa-brands fa-node"></i></Popper>
-                            <Popper content="Vue.js"><i class="fa-brands fa-vuejs"></i></Popper>
-                            <Popper content="MySQL"><i class="bi bi-filetype-sql"></i></Popper>
+                            <Popper id="Popper" content="HTML"><i class="fa-solid fa-code"></i></Popper>
+                            <Popper id="Popper" content="CSS"><i class="fa-brands fa-css3"></i></Popper>
+                            <Popper id="Popper" content="Boostrap"><i class="fa-brands fa-bootstrap"></i></Popper>
+                            <Popper id="Popper" content="Javascript"><i class="bi bi-filetype-js"></i></Popper>
+                            <Popper id="Popper" content="Node.js"><i class="fa-brands fa-node"></i></Popper>
+                            <Popper id="Popper" content="Vue.js"><i class="fa-brands fa-vuejs"></i></Popper>
+                            <Popper id="Popper" content="MySQL"><i class="bi bi-filetype-sql"></i></Popper>
                         </div>
                         <div class="col-12 btnCon">
                             <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
@@ -158,6 +158,14 @@ p {
     grid-template-rows: 1fr 1fr;
     font-size: 4rem;
     grid-gap: 10px;
+}
+
+#Popper {
+text-shadow: 5px 5px 5px black;
+}
+
+i{
+    text-shadow: none !important;
 }
 
 @media only screen and (max-width: 600px) {

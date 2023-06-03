@@ -88,19 +88,29 @@
       font-size: 3rem;
     }
 
+    
     @media only screen  and (max-width: 600px) {
       #headings {
-      color: rgb(109, 75, 109);
-      margin-top: 120px;
+        color: rgb(109, 75, 109);
+        margin-top: 120px;
+      }
+      
+      #headings h2 {
+        font-size: 2rem;
+      }
+      
+      #headings h3 {
+        font-size: 2rem;
+      }
     }
-
-    #headings h2 {
-      font-size: 2rem;
+    @media only screen and (max-width: 700px) {
+      #headings h2 {
+      font-size: 3rem;
     }
-
+  
     #headings h3 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     }
-  </style>
+    </style>
   

@@ -164,6 +164,7 @@ export default {
     -webkit-backdrop-filter: blur(7.9px);
     display: flex;
     /* flex-direction: colum; */
+    overflow: scroll;
 }
 
 .tabCon button {
@@ -208,6 +209,7 @@ export default {
     display: block;
 }
 
+
 @media only screen and (max-width: 600px) {
     .tabCon button {
         border-radius: 5px;
@@ -217,13 +219,20 @@ export default {
         height: 50px;
         width: 90px;
     }
-
-    .tabCon {
-        overflow: scroll;
-    }
-
+    
     .heading {
         font-size: 4rem;
+    }
+}
+@media only screen and (max-width: 700px) {
+    
+    .tabCon button {
+        border-radius: 5px;
+        padding: 5px 5px;
+        margin: 5px;
+        font-size: 1rem;
+        height: 70px;
+        width: 100px;
     }
 }
 </style>

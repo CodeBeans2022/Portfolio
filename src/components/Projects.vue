@@ -9,9 +9,9 @@
                     <h1 class="heading">Projects</h1>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="carRow">
                 <div class="col">
-                    <div id="carousel" class="carousel slide carousel-fade">
+                    <div class="carousel slide carousel-fade w-100"  id="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item"  :class="item.className" v-for="item in this.projects" :key="item.projectsID">
                                         
@@ -96,12 +96,17 @@ export default {
     font-size: 5rem;
 }
 
+.carousel {
+    width: 60%;
+}
+
 .card {
     border: 1px solid black;
     border-radius: 20px;
     margin: 10px 0;
     width: 18rem;
 }
+
 
 #indicators {
     color: black;
@@ -162,6 +167,15 @@ export default {
 
 .heading {
     font-size: 4rem;
+}
+}
+
+@media only screen and (max-width: 700px) {
+    #projImg {
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 20px;
 }
 }
 </style>

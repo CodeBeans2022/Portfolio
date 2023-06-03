@@ -3,8 +3,8 @@
         <Spinner/>
     </div>
     <div id="testimonials" v-else>
-        <div class="container">
-            <div class="row">
+        <div class="container-fluid m-0">
+            <div class="row mb-4">
                 <div class="col text-center">
                     <h1 class="heading">Testimonials</h1>
                 </div>
@@ -149,22 +149,19 @@ a i:hover {
     align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
+
+@media screen and (max-width: 600px) {
     .heading {
-    font-size: 3rem;
-}
-
-#reviewerImg {
-    height: 300px;
-    width: 100%;
-    /* min-width: 200px; */
-    object-fit: contain;
-    /* grid-column: span 2; */
-}
-
-/* #testi {
-    padding: 0;
-} */
+        font-size: 4rem;
+    }
+    
+    #reviewerImg {
+        height: 300px;
+        width: 100%;
+        /* min-width: 200px; */
+        object-fit: contain;
+        /* grid-column: span 2; */
+    }
 
 .modal-content {
     width: 100%;
@@ -177,5 +174,20 @@ a i:hover {
     font-size: 1.5rem;
 }
 }
+
+/* @media screen and (max-width: 670px) {
+        .heading {
+        font-size: 3rem;
+    }
+    #reviewerImg {
+            width: 100%;
+        }
+    } */
+    
+    @media screen and (max-width: 700px) {
+        #reviewerImg {
+            width: 100%;
+        }
+    }
 </style>
     

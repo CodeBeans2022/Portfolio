@@ -16,7 +16,7 @@
                     aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas m-5" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -47,7 +47,7 @@ export default {
     background-color: rgb(175, 75, 172);
     height: 70px;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     border-radius: 30px;
     margin: 10px 20%;
     width: 60%;
@@ -74,31 +74,42 @@ export default {
 
 .navMobile {
     display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: rgb(175, 75, 172);
+    z-index: 100;
 }
 
 
 .offcanvas {
     background-color: rgba(175, 75, 172, 0.705);
     border-radius: 20px;
+    position: fixed;
+    width: 60%;
+    top: 20%;
+    left: 20%;
+    height: fit-content;
+
 }
 
-@media only screen and (max-width: 600px) {
-    .navDesktop {
-        display: none;
-    }
-
-    .navMobile {
-        display: block;
-    }
-
-    .navbar-nav a {
+.navbar-nav a {
         text-decoration: none;
         color: #2c3e50;
         font-size: 1.5rem;
         margin: 5px;
     }
 
-}
-</style>
+
+@media only screen and (max-width: 1000px) {
+    .navDesktop {
+        display: none;
+    }
     
+    .navMobile {
+        display: block;
+    }
+    
+}
+
+</style>
