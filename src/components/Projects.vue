@@ -1,7 +1,4 @@
 <template>
-    <div class="spinner" v-if="!spinner">
-        <Spinner/>
-    </div>
     <div id="projects">
         <div class="container">
             <div class="row">
@@ -39,17 +36,10 @@
 </template>
     
 <script>
-import Spinner from '@/components/Spinner.vue'
 export default {
-    components: {
-        Spinner
-    },
     computed: {
         projects() {
             return this.$store.state.projects
-        },
-        spinner() {
-            return this.$store.state.spinner
         }
     },
     
@@ -73,15 +63,6 @@ export default {
 /* .container {
     
 } */
-
-.spinner{
-    font-size: 40px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    /* transform: translateY(-50%) translateX(-50%); */
-}
 
 #projects {
     scroll-margin: 65px;

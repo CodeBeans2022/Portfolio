@@ -28,7 +28,7 @@
         position: fixed;
         bottom: 0;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         width: 100%;
     }
 

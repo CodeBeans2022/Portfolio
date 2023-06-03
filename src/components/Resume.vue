@@ -1,8 +1,5 @@
 <template>
-    <div class="spinner" v-if="!spinner">
-        <Spinner />
-    </div>
-    <div id="resume" v-else>
+    <div id="resume">
         <div class="row">
             <div class="col">
                 <h1 class="heading mb-5">Resume</h1>
@@ -50,21 +47,14 @@
 </template>
 
 <script>
-import Spinner from "@/components/Spinner.vue";
 export default {
-    components: {
-        Spinner,
-    },
     computed: {
         work() {
             return this.$store.state.work;
         },
         education() {
             return this.$store.state.education;
-        },
-        spinner() {
-            return this.$store.state.spinner;
-        },
+        }
     },
     async created() {
         await this.$store.dispatch("fetchWork");
@@ -112,15 +102,6 @@ export default {
     
 } */
 
-.spinner {
-    font-size: 40px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    /* transform: translateY(-50%) translateX(-50%); */
-}
-
 .show {
     display: block;
 }
@@ -163,8 +144,6 @@ export default {
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
     display: flex;
-    /* flex-direction: colum; */
-    overflow: scroll;
 }
 
 .tabCon button {
@@ -187,10 +166,6 @@ export default {
 .tabCon button.active {
     background-color: #ccc;
 }
-
-/* .tabsWork:nth-child(1){
-    background-color: #ccc;
-} */
 
 .contentEducation {
     display: none;
@@ -223,6 +198,10 @@ export default {
     .heading {
         font-size: 4rem;
     }
+
+    .tabCon {
+        overflow: scroll;
+    }
 }
 @media only screen and (max-width: 700px) {
     
@@ -233,6 +212,10 @@ export default {
         font-size: 1rem;
         height: 70px;
         width: 100px;
+    }
+
+    .tabCon {
+        overflow: scroll;
     }
 }
 </style>

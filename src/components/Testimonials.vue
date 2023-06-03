@@ -1,8 +1,5 @@
 <template>
-    <div class="spinner" v-if="!spinner">
-        <Spinner/>
-    </div>
-    <div id="testimonials" v-else>
+    <div id="testimonials">
         <div class="container-fluid m-0">
             <div class="row mb-4">
                 <div class="col text-center">
@@ -56,15 +53,9 @@
 <script>
 import Spinner from '@/components/Spinner.vue'
 export default {
-    components: {
-        Spinner
-    },
     computed: {
         testimonials() {
             return this.$store.state.testimonials
-        },
-        spinner() {
-            return this.$store.state.spinner
         }
     },
     created() {
@@ -74,15 +65,6 @@ export default {
 </script>
     
 <style scoped>
-
-.spinner{
-    font-size: 40px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    /* transform: translateY(-50%) translateX(-50%); */
-}
 .container {
       width: 60%;  
       }
