@@ -7,7 +7,7 @@
                 </div>
             </div>
         </div>
-        <div class="container" v-for="item in this.testimonials" :key="item.testimonialID" data-aos="fade-down-right" data-aos-duration="2000">
+        <div class="container" v-for="item in this.testimonials" :key="item.testimonialID" data-aos="fade-down-right" data-aos-duration="1000">
             <div class=" mb-4" id="testi">
                 <div class="col">
                     <img :src="item.reviewerImg" id="reviewerImg" alt="">

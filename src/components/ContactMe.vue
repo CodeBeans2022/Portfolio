@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col mx-auto" data-aos="fade-right" data-aos-duration="2000">
+                <div class="col mx-auto" data-aos="fade-right" data-aos-duration="1000">
                     <form class="form mx-auto" action="https://formspree.io/f/xrgvdwyr" method="post" target="_blank">
                         <input class="m-2 rounded text-center" type="text" placeholder="Please Enter Your Name">
                         <input class="m-2 rounded text-center" type="email" placeholder="Please Enter Your Email">
@@ -16,7 +16,7 @@
                         <button class="btn border border-2 border-dark" type="submit">Submit Message</button>
                     </form>
                 </div>
-                <div class="col" data-aos="fade-left" data-aos-duration="2000">
+                <div class="col" data-aos="fade-left" data-aos-duration="1000">
                     <div class="row">
                         <div class="col-12 mb-3">
                             <h3>Email: </h3>
