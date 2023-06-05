@@ -8,8 +8,8 @@
       <div class="container">
         <div class="row" v-for="item in this.home" :key="item.homeID">
           <div class="col textGlow" id="headings">
-            <h2 id="greeting">{{ item.greeting }}</h2>
-            <h3>{{ item.occupation }}</h3>
+            <h2 id="greeting" data-aos="zoom-in" data-aos-duration="2000">{{ item.greeting }}</h2>
+            <h3 data-aos="zoom-in-up" data-aos-duration="2000">{{ item.occupation }}</h3>
           </div>
         </div>
       </div>
@@ -32,6 +32,8 @@ import Testimonials from '@/components/Testimonials.vue'
 import ContactMe from '@/components/ContactMe.vue'
 import FooterComp from '@/components/Footer.vue'
 import Spinner from '@/components/Spinner.vue'
+import AOS from 'aos'
+AOS.init();
 export default {
   components: {
     About,

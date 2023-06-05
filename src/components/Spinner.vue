@@ -39,4 +39,17 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .loading {
+  top: 47%;
+  left: 40%;
+}
+}
+@media screen and (max-width: 700px) {
+  .loading {
+  top: 47%;
+  left: 43%;
+}
+}
 </style>

@@ -8,7 +8,7 @@
         <div class="row">
             <h4 class="resHeadings">Work Experience</h4>
         </div>
-        <div class="container Work mb-5">
+        <div class="container Work mb-5" data-aos="fade-left" data-aos-duration="2000">
             <div class="row">
                 <div class="tabCon">
                     <button v-for="item in this.work" :key="item.WorkID" class="tabsWork"
@@ -26,11 +26,12 @@
                 </div>
             </div>
         </div>
+    
 
         <div class="row">
             <h4 class="resHeadings">Education Experience</h4>
         </div>
-        <div class="container Education">
+        <div class="container Education" data-aos="fade-right" data-aos-duration="2000">
             <div class="row">
                 <div class="tabCon">
                     <button v-for="item in this.education" :key="item.EducationID" class="tabsEducation"
