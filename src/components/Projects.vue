@@ -14,8 +14,8 @@
                                         
                                 <img id="projImg" :src="item.siteImg" alt="">
                                         <h2 >{{ item.projectName }}</h2>
-                                        <a :href="item.githubLink"><i class="bi bi-github" id="socialIcons"></i></a>
-                                        <a :href="item.netlifyLink"><i class="bi bi-eye" id="socialIcons"></i></a>
+                                        <a :href="item.githubLink" target="_blank"><i class="bi bi-github" id="socialIcons"></i></a>
+                                        <a :href="item.netlifyLink" target="_blank"><i class="bi bi-eye" id="socialIcons"></i></a>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carousel"

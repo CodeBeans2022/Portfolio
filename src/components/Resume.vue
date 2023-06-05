@@ -5,6 +5,9 @@
                 <h1 class="heading mb-5">Resume</h1>
             </div>
         </div>
+        <div class="row">
+            <h4 class="resHeadings">Work Experience</h4>
+        </div>
         <div class="container Work mb-5">
             <div class="row">
                 <div class="tabCon">
@@ -24,6 +27,9 @@
             </div>
         </div>
 
+        <div class="row">
+            <h4 class="resHeadings">Education Experience</h4>
+        </div>
         <div class="container Education">
             <div class="row">
                 <div class="tabCon">
@@ -102,6 +108,10 @@ export default {
     
 } */
 
+.resHeadings {
+    text-decoration: underline;
+}
+
 .show {
     display: block;
 }
@@ -144,6 +154,18 @@ export default {
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
     display: flex;
+    overflow-y: scroll;
+}
+
+.tabCon::-webkit-scrollbar{
+  background-color: #F5F5F5;
+  color: #333;
+  line-height: 1.5;
+ display: none;
+}
+.tabCon {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .tabCon button {
@@ -198,10 +220,6 @@ export default {
     .heading {
         font-size: 4rem;
     }
-
-    .tabCon {
-        overflow: scroll;
-    }
 }
 @media only screen and (max-width: 700px) {
     
@@ -212,10 +230,6 @@ export default {
         font-size: 1rem;
         height: 70px;
         width: 100px;
-    }
-
-    .tabCon {
-        overflow: scroll;
     }
 }
 </style>
