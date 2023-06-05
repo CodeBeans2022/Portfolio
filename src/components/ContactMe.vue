@@ -69,7 +69,13 @@ form {
 }
 
 input {
+    background: rgba(164, 92, 206, 0.32);
     min-height: 40px;
+}
+
+textarea {
+    background: rgba(164, 92, 206, 0.32);
+    border: 1px solid black;
 }
 
 a i {
