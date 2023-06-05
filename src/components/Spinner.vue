@@ -12,7 +12,7 @@
 .loading {
   position: fixed;
   top: 47%;
-  left: 43%;
+  left: 46%;
   z-index: 100;
   color: rgb(212, 210, 210);
 }
