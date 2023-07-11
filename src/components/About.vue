@@ -33,7 +33,8 @@
                                 Read Bio
                             </button>
                             <a class="btn border border-2 border-dark"
-                                href="https://drive.google.com/file/d/1yXKlNit_U3qP5AVJCIC5GpL5ySYLyZaP/view?usp=drive_link"
+                            
+                                href="https://drive.google.com/file/d/1Ql5ASQvTgywz7yfLAs0HMjh7_J0_NCwZ/view?usp=sharing"
                                 download target="_blank">Download CV</a>
                         </div>
                     </div>
