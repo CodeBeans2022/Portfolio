@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainView from '../views/MainView.vue'
+import PageUnavailable from '../views/PageUnavailableView.vue'
+import ConstructionPage from '../views/ConstructionView.vue'
 // import AboutView from '../views/AboutView.vue'
 // import ResumeView from '../views/ResumeView.vue'
 // import ProjectsView from '../views/ProjectsView.vue'
@@ -8,10 +10,20 @@ import MainView from '../views/MainView.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: MainView
   },
+  {
+    path: '/page-unavailable',
+    name: 'pageUnavailable',
+    component: PageUnavailable
+  },
+  {
+    path: '/',
+    name: 'maintenance-page',
+    component: ConstructionPage
+  }
   // {
   //   path: '/about',
   //   name: 'about',

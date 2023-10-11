@@ -7,7 +7,8 @@
                 </div>
             </div>
         </div>
-        <div class="container" v-for="item in this.testimonials" :key="item.testimonialID" data-aos="fade-down-right" data-aos-duration="1000">
+        <div class="container" v-for="item in this.testimonials" :key="item.testimonialID" data-aos="fade-down-right"
+            data-aos-duration="1000">
             <div class=" mb-4" id="testi">
                 <div class="col">
                     <img :src="item.reviewerImg" id="reviewerImg" alt="">
@@ -18,10 +19,16 @@
                             <h1>{{ item.fullName }}</h1>
                         </div>
                         <div class="col-12">
-                            <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
-                            :data-bs-target="'#' + item.testimonialID">
-                            Read More
+                            <!-- <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
+                                :data-bs-target="'#' + item.testimonialID">
+                                Read More
+                            </button> -->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                :data-bs-target="'#' + item.testimonialID">
+                                Launch demo modal
                             </button>
+
                         </div>
                         <div class="col-12">
                             <a :href="item.linkedinLink" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -31,7 +38,7 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade" :id="item.testimonialID" data-bs-backdrop="static" data-bs-keyboard="false"
+            <!-- <div class="modal fade" :id="item.testimonialID" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -45,13 +52,33 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+                 <!-- Modal -->
+                 <div class="modal fade" :id="item.testimonialID" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>{{ item.testimonial }}</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
         </div>
     </div>
 </template>
     
 <script>
-import Spinner from '@/components/Spinner.vue'
 export default {
     computed: {
         testimonials() {
@@ -66,8 +93,8 @@ export default {
     
 <style scoped>
 .container {
-      width: 60%;  
-      }
+    width: 60%;
+}
 
 #reviewerImg {
     height: 400px;
@@ -86,7 +113,7 @@ export default {
     /* width: 100%; */
 }
 
-#testi{
+#testi {
     background: rgba(143, 63, 189, 0.32);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -124,7 +151,7 @@ a i:hover {
     color: whitesmoke;
 }
 
-#details{
+#details {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -136,7 +163,7 @@ a i:hover {
     .heading {
         font-size: 4rem;
     }
-    
+
     #reviewerImg {
         height: 300px;
         width: 100%;
@@ -145,16 +172,16 @@ a i:hover {
         /* grid-column: span 2; */
     }
 
-.modal-content {
-    width: 100%;
-    font-size: 1.5rem;
-}
+    .modal-content {
+        width: 100%;
+        font-size: 1.5rem;
+    }
 
-.btn {
-    height: 100%;
-    width: 100%;
-    font-size: 1.5rem;
-}
+    .btn {
+        height: 100%;
+        width: 100%;
+        font-size: 1.5rem;
+    }
 }
 
 /* @media screen and (max-width: 670px) {
@@ -165,11 +192,10 @@ a i:hover {
             width: 100%;
         }
     } */
-    
-    @media screen and (max-width: 700px) {
-        #reviewerImg {
-            width: 100%;
-        }
+
+@media screen and (max-width: 700px) {
+    #reviewerImg {
+        width: 100%;
     }
-</style>
+}</style>
     

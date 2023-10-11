@@ -6,7 +6,6 @@
                 <a href="#about">About</a>
                 <a href="#resume">Resume</a>
                 <a href="#projects">Projects</a>
-                <a href="#testimonials">Testionials</a>
                 <a href="#contactMe">Contact Me</a>
             </div>
         </nav>
@@ -26,7 +25,6 @@
                             <li class="nav-item"><a href="#about">About</a></li>
                             <li class="nav-item"><a href="#resume">Resume</a></li>
                             <li class="nav-item"><a href="#projects">Projects</a></li>
-                            <li class="nav-item"><a href="#testimonials">Testionials</a></li>
                             <li class="nav-item"><a href="#contactMe">Contact Me</a></li>
                         </ul>
                     </div>
