@@ -3,6 +3,7 @@
         <h1>This page is unavailable. Please return to the Home Page.</h1>
         <p>Click the link below</p>
         <a href="https://portfolio-46fc3.web.app/">Home Page</a>
+        
     </div>
 </template>
 
