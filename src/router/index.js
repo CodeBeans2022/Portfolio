@@ -12,13 +12,13 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: MainView
+    component: ConstructionPage //Change this back to MainView.vue once maintenance is complete
   },
-  {
-    path: '/page-unavailable',
-    name: 'pageUnavailable',
-    component: PageUnavailable
-  },
+  // {
+  //   path: '/page-unavailable',
+  //   name: 'pageUnavailable',
+  //   component: PageUnavailable
+  // },
   {
     path: '/',
     name: 'maintenance-page',
