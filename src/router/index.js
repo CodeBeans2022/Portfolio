@@ -5,7 +5,7 @@ import ConstructionPage from '../views/ConstructionView.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: MainView //Change this back to MainView.vue once maintenance is complete
   },
@@ -14,11 +14,11 @@ const routes = [
     name: 'pageUnavailable',
     component: PageUnavailable
   },
-  // {
-  //   path: '/',
-  //   name: 'maintenance-page',
-  //   component: ConstructionPage
-  // }
+  {
+    path: '/',
+    name: 'maintenance-page',
+    component: ConstructionPage
+  }
 ]
 
 const router = createRouter({
