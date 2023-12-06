@@ -17,6 +17,7 @@
     <About />
     <Resume />
     <Projects />
+    <Testimonials/>
     <ContactMe />
     <FooterComp />
   </div>
@@ -27,6 +28,7 @@ import NavBar from '@/components/NavBar.vue'
 import About from '@/components/About.vue'
 import Resume from '@/components/Resume.vue'
 import Projects from '@/components/Projects.vue'
+import Testimonials from '@/components/Testimonials.vue'
 import ContactMe from '@/components/ContactMe.vue'
 import FooterComp from '@/components/Footer.vue'
 import Spinner from '@/components/Spinner.vue'
@@ -37,6 +39,7 @@ export default {
     About,
     Resume,
     Projects,
+    Testimonials,
     ContactMe,
     NavBar,
     FooterComp,

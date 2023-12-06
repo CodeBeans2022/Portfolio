@@ -19,16 +19,10 @@
                             <h1>{{ item.fullName }}</h1>
                         </div>
                         <div class="col-12">
-                            <!-- <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
+                            <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
                                 :data-bs-target="'#' + item.testimonialID">
                                 Read More
-                            </button> -->
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                :data-bs-target="'#' + item.testimonialID">
-                                Launch demo modal
                             </button>
-
                         </div>
                         <div class="col-12">
                             <a :href="item.linkedinLink" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -38,7 +32,7 @@
                 </div>
             </div>
             <!-- Modal -->
-            <!-- <div class="modal fade" :id="item.testimonialID" data-bs-backdrop="static" data-bs-keyboard="false"
+            <div class="modal fade" :id="item.testimonialID" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -52,28 +46,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
-
-                 <!-- Modal -->
-                 <div class="modal fade" :id="item.testimonialID" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>{{ item.testimonial }}</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
         </div>
     </div>
 </template>

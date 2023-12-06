@@ -6,6 +6,7 @@
                 <a href="#about">About</a>
                 <a href="#resume">Resume</a>
                 <a href="#projects">Projects</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#contactMe">Contact Me</a>
             </div>
         </nav>
