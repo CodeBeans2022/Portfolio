@@ -26,6 +26,7 @@
                             <li class="nav-item"><a href="#about">About</a></li>
                             <li class="nav-item"><a href="#resume">Resume</a></li>
                             <li class="nav-item"><a href="#projects">Projects</a></li>
+                            <li class="nav-item"><a href="#testimonials">Testimonials</a></li>
                             <li class="nav-item"><a href="#contactMe">Contact Me</a></li>
                         </ul>
                     </div>
