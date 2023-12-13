@@ -7,7 +7,7 @@
                 </div>
             </div>
         </div>
-        <div class="container" v-for="item in this.testimonials" :key="item.testimonialID" data-aos="fade-down-right"
+        <div class="container" v-for="item in this.testimonials" :key="item.fullName" data-aos="fade-down-right"
             data-aos-duration="1000">
             <div class=" mb-4" id="testi">
                 <div class="col">
@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-12">
                             <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
-                                :data-bs-target="'#' + item.testimonialID">
+                                :data-bs-target="'#' + item.fullName">
                                 Read More
                             </button>
                         </div>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade" :id="item.testimonialID" data-bs-backdrop="static" data-bs-keyboard="false"
+            <div class="modal fade" :id="item.fullName" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -101,6 +101,10 @@ export default {
     background-color: rgba(222, 169, 220, 0.767);
     color: white;
     font-size: 2rem;
+}
+
+.modal {
+    z-index: 10000;
 }
 
 .btn {
