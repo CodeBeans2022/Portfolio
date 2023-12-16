@@ -103,10 +103,6 @@ export default {
     font-size: 2rem;
 }
 
-.modal {
-    z-index: 10000;
-}
-
 .btn {
     height: 60px;
     width: 200px;
