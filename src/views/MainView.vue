@@ -83,7 +83,7 @@ export default {
 }
 
 .home {
-  background-image: url('https://i.postimg.cc/5NvPPhgY/myimage.png');
+  background-image: url('../assets/myimage.png');
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
