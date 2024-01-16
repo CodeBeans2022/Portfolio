@@ -66,7 +66,7 @@ export default {
 
 #projects {
     scroll-margin: 65px;
-    min-height: 100vh;
+    min-height: fit-content;
 }
 
 /* .carousel {

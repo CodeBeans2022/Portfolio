@@ -1,6 +1,6 @@
 <template>
     <div id="contactMe">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col text-center">
                     <h1 class="heading m-5">Contact Me</h1>
@@ -8,12 +8,13 @@
             </div>
             <div class="row">
                 <div class="col mx-auto" data-aos="fade-right" data-aos-duration="1000">
-                    <form class="form mx-auto" action="https://formspree.io/f/xrgvdwyr" method="post" target="_blank">
-                        <input class="m-2 rounded text-center" type="text" placeholder="Please Enter Your Name">
-                        <input class="m-2 rounded text-center" type="email" placeholder="Please Enter Your Email">
+                    <form class="form mx-auto" method="post" id="sendDetails">
+                        <input class="m-2 rounded text-center" name="name" type="text" placeholder="Please Enter Your Name" id="name" v-model="name">
+                        <input class="m-2 rounded text-center" name="email" type="email" placeholder="Please Enter Your Email" id="email" v-model="email">
+                        <input class="m-2 rounded text-center" name="number" type="number" placeholder="Please Enter Your Phone Number" id="number" v-model="number">
                         <textarea class="m-2 rounded text-center" name="message" id="message" rows="5"
-                            placeholder="Enter Your Message Here"></textarea>
-                        <button class="btn border border-2 border-dark" type="submit">Submit Message</button>
+                            placeholder="Enter Your Message Here" v-model="message"></textarea>
+                        <button class="btn btn-outline-dark" type="submit" v-on:click.prevent="sendEmail(e)">Send Email</button>
                     </form>
                 </div>
                 <div class="col" data-aos="fade-left" data-aos-duration="1000">
@@ -40,8 +41,40 @@
 </template>
     
 <script>
-
+import emailjs from 'emailjs-com';
 export default {
+    data() {
+        return {
+            name: '',
+            email: '',
+            number: '',
+            message: ''
+        }
+    },
+    methods: {
+      sendEmail(e) {
+        try {
+            emailjs.sendForm('service_av8t98s', 'template_twp4xyu', document.querySelector('#sendDetails'), 'asUqbpa2esv8NeI-q', {
+                name: this.name,
+                email: this.email,
+                number: this.number,
+                message: this.message
+            }).then((res)=>{
+                console.log(res)
+            }).catch((err) => {
+                console.log(err)
+            })
+            // console.log(userDetails);
+        } catch (error) {
+            console.warn(error)
+        }
+        alert('Your email has been recieved! Thank you.')
+        this.name = ''
+        this.email = ''
+        this.number = ''
+        this.message = ''
+      }      
+    }
 }
 </script>
     
@@ -52,7 +85,7 @@ export default {
 
 #contactMe {
     scroll-margin: 15px;
-    min-height: 100vh;
+    padding-bottom: 100px;
 }
 
 .heading {
