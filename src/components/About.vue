@@ -34,7 +34,7 @@
                             </button>
                             <a class="btn border border-2 border-dark"
                             
-                                href="https://drive.google.com/file/d/1iYco9vp9chZy-TWyv8Wai5yMXUR0itgy/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1cFHj1cEEljddzuley2Z0eJMljEqJz06R/view?usp=sharing"
                                 download target="_blank">Download CV</a>
                         </div>
                     </div>
