@@ -85,6 +85,7 @@ export default {
 
 #contactMe {
     scroll-margin: 15px;
+    min-height: 80vh;
     padding-bottom: 100px;
 }
 

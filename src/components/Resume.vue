@@ -135,7 +135,7 @@ export default {
 
 #resume {
     scroll-margin: 60px;
-    min-height: fit-content;
+    min-height: 90vh;
     margin: 10px;
 }
 

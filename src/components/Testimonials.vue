@@ -59,8 +59,8 @@ export default {
 }
 
 #testimonials {
-    scroll-margin: 15px;
-    min-height: 100vh;
+    scroll-margin: 65px;
+    min-height: fit-content;
 }
 
 .testi {
@@ -101,7 +101,7 @@ a i:hover {
 
 @media screen and (max-width: 600px) {
     .heading {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     #reviewerImg {

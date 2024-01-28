@@ -1,0 +1,49 @@
+[debug] [2024-01-16T16:23:59.802Z] ----------------------------------------------------------------------
+[debug] [2024-01-16T16:23:59.806Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-01-16T16:23:59.807Z] CLI Version:   13.0.3
+[debug] [2024-01-16T16:23:59.808Z] Platform:      win32
+[debug] [2024-01-16T16:23:59.808Z] Node Version:  v19.6.0
+[debug] [2024-01-16T16:23:59.808Z] Time:          Tue Jan 16 2024 18:23:59 GMT+0200 (South Africa Standard Time)
+[debug] [2024-01-16T16:23:59.809Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-16T16:23:59.931Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-16T16:23:59.932Z] > authorizing via signed-in user (kinneartechnologies22@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Development\Portfolio\frontend
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-01-16T16:24:05.059Z] Using project from CLI flag: portfolio-46fc3
+[debug] [2024-01-16T16:24:05.063Z] > refreshing access token with scopes: []
+[debug] [2024-01-16T16:24:05.066Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-16T16:24:05.066Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-16T16:24:06.334Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-16T16:24:06.335Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-16T16:24:06.335Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-46fc3 [none]
+[debug] [2024-01-16T16:24:06.851Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-46fc3 401
+[debug] [2024-01-16T16:24:06.851Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-46fc3 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCOUNT_STATE_INVALID","domain":"googleapis.com","metadata":{"service":"firebase.googleapis.com","method":"google.firebase.service.v1beta1.FirebaseProjectService.GetFirebaseProject"}}]}}
+[debug] [2024-01-16T16:24:06.852Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-16T16:24:07.567Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:292:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project portfolio-46fc3. Please make sure the project exists and your account has permission to access it.

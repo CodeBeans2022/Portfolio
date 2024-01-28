@@ -87,7 +87,7 @@ export default defineComponent(
 
 #about {
     scroll-margin: 60px;
-    min-height: fit-content;
+    min-height: 90vh;
 }
 
 .heading {
