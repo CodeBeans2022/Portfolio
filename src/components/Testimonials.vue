@@ -7,10 +7,10 @@
                 </div>
             </div>
         </div>
-        <div class="container" v-for="item in this.testimonials" :key="item.fullName" data-aos="fade-down-right"
+        <div class="container" v-for="item in this.testimonials" :key="item.fullName" 
             data-aos-duration="1000">
             <div class="row mb-4" id="testi">
-                <div class="col">
+                <div class="col-sm-12 col-md-12 col-lg-12">
                     <img :src="item.reviewerImg" id="reviewerImg" alt="">
                 </div>
                 <div class="col">
@@ -101,7 +101,7 @@ a i:hover {
 
 @media screen and (max-width: 600px) {
     .heading {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
 
     #reviewerImg {
@@ -111,9 +111,10 @@ a i:hover {
     }
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
     #reviewerImg {
         width: 100%;
     }
-}</style>
+} */
+</style>
     

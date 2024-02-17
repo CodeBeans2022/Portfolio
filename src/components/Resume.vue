@@ -8,7 +8,7 @@
         <div class="row">
             <h4 class="resHeadings">Work Experience</h4>
         </div>
-        <div class="container Work mb-5" data-aos="fade-left" data-aos-duration="2000">
+        <div class="container Work mb-5"  data-aos-duration="2000">
             <div class="row">
                 <div class="tabCon">
                     <button v-for="item in this.work" :key="item.WorkID" class="tabsWork"
@@ -31,7 +31,7 @@
         <div class="row">
             <h4 class="resHeadings">Education Experience</h4>
         </div>
-        <div class="container Education" data-aos="fade-right" data-aos-duration="2000">
+        <div class="container Education"  data-aos-duration="2000">
             <div class="row">
                 <div class="tabCon">
                     <button v-for="item in this.education" :key="item.EducationID" class="tabsEducation"
@@ -135,7 +135,7 @@ export default {
 
 #resume {
     scroll-margin: 60px;
-    min-height: 90vh;
+    min-height: 9 0vh;
     margin: 10px;
 }
 

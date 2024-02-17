@@ -19,13 +19,10 @@
                             <h6 class="message">click icons</h6>
                         </div>
                         <div class="col" id="icons">
-                            <Popper id="Popper" content="HTML"><i class="fa-solid fa-code" data-aos="fade-down-right" data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="CSS"><i class="fa-brands fa-css3" data-aos="fade-down" data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="Boostrap"><i class="fa-brands fa-bootstrap" data-aos="fade-down-left" data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="Javascript"><i class="bi bi-filetype-js" data-aos="fade-down-right" data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="Node.js"><i class="fa-brands fa-node" data-aos="fade-up" data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="Vue.js"><i class="fa-brands fa-vuejs" data-aos="fade-down-left" data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="MySQL"><i class="bi bi-filetype-sql" data-aos="fade-down-right" data-aos-duration="2000"></i></Popper>
+                            <Popper id="Popper" content="HTML"><i class="fa-solid fa-code"  data-aos-duration="2000"></i></Popper>
+                            <Popper id="Popper" content="CSS"><i class="fa-brands fa-css3"  data-aos-duration="2000"></i></Popper>
+                            <Popper id="Popper" content="Boostrap"><i class="fa-brands fa-bootstrap"  data-aos-duration="2000"></i></Popper>
+                            <Popper id="Popper" content="Javascript"><i class="bi bi-filetype-js" data-aos-duration="2000"></i></Popper>
                         </div>
                         <div class="col-12 btnCon">
                             <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
@@ -34,7 +31,7 @@
                             </button>
                             <a class="btn border border-2 border-dark"
                             
-                                href="https://drive.google.com/file/d/1cFHj1cEEljddzuley2Z0eJMljEqJz06R/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1Z_u8visaHn4ii9AVaQdjA9JTL0l2dWG7/view?usp=sharing"
                                 download target="_blank">Download CV</a>
                         </div>
                     </div>
