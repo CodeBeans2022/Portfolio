@@ -1,5 +1,5 @@
 <template>
-    <div id="projects">
+    <div class="mb-5" id="projects">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -66,7 +66,7 @@ export default {
 
 #projects {
     scroll-margin: 65px;
-    min-height: 90vh;
+    min-height: fit-content;
 }
 
 /* .carousel {

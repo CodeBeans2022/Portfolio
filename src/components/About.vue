@@ -1,5 +1,5 @@
 <template>
-    <div id="about">
+    <div class="mb-5" id="about">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -19,10 +19,10 @@
                             <h6 class="message">click icons</h6>
                         </div>
                         <div class="col" id="icons">
-                            <Popper id="Popper" content="HTML"><i class="fa-solid fa-code"  data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="CSS"><i class="fa-brands fa-css3"  data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="Boostrap"><i class="fa-brands fa-bootstrap"  data-aos-duration="2000"></i></Popper>
-                            <Popper id="Popper" content="Javascript"><i class="bi bi-filetype-js" data-aos-duration="2000"></i></Popper>
+                            <Popper id="Popper" content="HTML"><i class="fa-solid fa-code"></i></Popper>
+                            <Popper id="Popper" content="CSS"><i class="fa-brands fa-css3"></i></Popper>
+                            <Popper id="Popper" content="Boostrap"><i class="fa-brands fa-bootstrap"></i></Popper>
+                            <Popper id="Popper" content="Javascript"><i class="bi bi-filetype-js"></i></Popper>
                         </div>
                         <div class="col-12 btnCon">
                             <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
@@ -84,7 +84,7 @@ export default defineComponent(
 
 #about {
     scroll-margin: 60px;
-    min-height: 90vh;
+    min-height: fit-content;
 }
 
 .heading {
@@ -127,6 +127,9 @@ p {
 
 .btnCon {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #socials {

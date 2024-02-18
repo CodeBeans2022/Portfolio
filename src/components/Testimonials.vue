@@ -1,13 +1,13 @@
 <template>
-    <div  id="testimonials">
+    <div class="mb-5" id="testimonials">
         <div class="container-fluid m-0">
-            <div class="row mb-4">
+            <div class="row">
                 <div class="col text-center">
                     <h1 class="heading">Testimonials</h1>
                 </div>
             </div>
         </div>
-        <div class="container" v-for="item in this.testimonials" :key="item.fullName" 
+        <div class="container" v-for="item in this.testimonials" :key="item.fullName" data-aos="zoom-in"
             data-aos-duration="1000">
             <div class="row mb-4" id="testi">
                 <div class="col-sm-12 col-md-12 col-lg-12">
@@ -101,7 +101,7 @@ a i:hover {
 
 @media screen and (max-width: 600px) {
     .heading {
-        font-size: 1.5rem;
+        font-size: 4rem;
     }
 
     #reviewerImg {

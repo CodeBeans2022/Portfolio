@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col mx-auto" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col mx-auto">
                     <form class="form mx-auto" method="post" id="sendDetails">
                         <input class="m-2 rounded text-center" name="name" type="text" placeholder="Please Enter Your Name" id="name" v-model="name">
                         <input class="m-2 rounded text-center" name="email" type="email" placeholder="Please Enter Your Email" id="email" v-model="email">
@@ -17,7 +17,7 @@
                         <button class="btn btn-outline-dark" type="submit" v-on:click.prevent="sendEmail(e)">Send Email</button>
                     </form>
                 </div>
-                <div class="col" data-aos="fade-left" data-aos-duration="1000">
+                <div class="col">
                     <div class="row">
                         <div class="col-12 mb-3">
                             <h3>Email: </h3>
