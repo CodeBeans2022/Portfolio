@@ -22,7 +22,8 @@
                             <Popper id="Popper" content="HTML"><i class="fa-solid fa-code"></i></Popper>
                             <Popper id="Popper" content="CSS"><i class="fa-brands fa-css3"></i></Popper>
                             <Popper id="Popper" content="Boostrap"><i class="fa-brands fa-bootstrap"></i></Popper>
-                            <Popper id="Popper" content="Javascript"><i class="bi bi-filetype-js"></i></Popper>
+                            <Popper id="Popper" content="Javascript, Vue.js, Node.js, Express.js"><i class="bi bi-filetype-js"></i></Popper>
+                            <Popper id="Popper" content="MySQL"><i class="bi bi-filetype-sql"></i></Popper>
                         </div>
                         <div class="col-12 btnCon">
                             <button type="button" class="btn border border-2 border-dark" data-bs-toggle="modal"
@@ -31,7 +32,7 @@
                             </button>
                             <a class="btn border border-2 border-dark"
                             
-                                href="https://drive.google.com/file/d/1Z_u8visaHn4ii9AVaQdjA9JTL0l2dWG7/view?usp=sharing"
+                                href="https://drive.google.com/file/d/14Bfm80Emvp7GmPs04Wl3NiH4hRAHnYwn/view?usp=sharing"
                                 download target="_blank">Download CV</a>
                         </div>
                     </div>
